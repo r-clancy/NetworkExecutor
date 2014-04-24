@@ -1,0 +1,15 @@
+name: NetworkExecutor
+main: com.rylinaux.networkexecutor.NetworkExecutor
+version: 1.0.0
+author: rylinaux
+
+commands:
+  networkexecutor:
+    description: Send commands to all servers connected to Redis.
+    usage: /networkexecutor (command)
+    aliases: [ne, netex, netexec]
+
+permissions:
+  networkexecutor.use:
+    description: Allows a sender to send commands to all servers.
+    default: op
