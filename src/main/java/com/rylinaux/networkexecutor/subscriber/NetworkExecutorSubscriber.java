@@ -54,7 +54,7 @@ public class NetworkExecutorSubscriber extends JedisPubSub {
 
     @Override
     public void onMessage(String channel, String message) {
-        plugin.getServer().getScheduler().runTaskAsynchronously(plugin, new DispatchTask(plugin, message));
+        plugin.getServer().getScheduler().runTask(plugin, new DispatchTask(plugin, message));
     }
 
     @Override
