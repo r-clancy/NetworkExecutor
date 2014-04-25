@@ -1,4 +1,4 @@
-package com.rylinaux.networkexecutor.thread;
+package com.rylinaux.networkexecutor.task;
 
 /*
  * #%L
@@ -38,7 +38,7 @@ import redis.clients.jedis.Jedis;
  *
  * @author rylinaux
  */
-public class JedisThread extends Thread {
+public class SubscribeTask implements Runnable {
 
     /**
      * The plugin instance.
@@ -50,7 +50,7 @@ public class JedisThread extends Thread {
      *
      * @param plugin the plugin instance.
      */
-    public JedisThread(NetworkExecutor plugin) {
+    public SubscribeTask(NetworkExecutor plugin) {
         this.plugin = plugin;
     }
 

@@ -26,7 +26,7 @@ package com.rylinaux.networkexecutor;
  * #L%
  */
 
-import com.rylinaux.networkexecutor.thread.JedisThread;
+import com.rylinaux.networkexecutor.task.SubscribeTask;
 
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -75,9 +75,7 @@ public class NetworkExecutor extends JavaPlugin {
             jedisPool = new JedisPool(new JedisPoolConfig(), hostname, port, 0, password);
         }
 
-        this.getServer().getScheduler().runTaskAsynchronously(this, new JedisThread(this));
-        //Thread jedisThread = new JedisThread(this);
-        //jedisThread.start();
+        this.getServer().getScheduler().runTaskAsynchronously(this, new SubscribeTask(this));
 
         this.getCommand("networkexecutor").setExecutor(new NetworkExecutorCommandExecutor(this));
 
