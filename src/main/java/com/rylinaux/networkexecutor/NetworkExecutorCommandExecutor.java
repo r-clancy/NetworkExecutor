@@ -35,6 +35,11 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
+/**
+ * Handle commands from the user.
+ *
+ * @author rylinaux
+ */
 public class NetworkExecutorCommandExecutor implements CommandExecutor {
 
     /**
